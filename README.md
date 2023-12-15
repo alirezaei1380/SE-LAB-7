@@ -196,3 +196,60 @@ We added following tests to check if data is properly stored:
 And here is the result in method and line coverage:
 
 // image
+
+### Enhancement 6
+
+Objective: Covering remained methods in Traffic class
+
+
+We added following tests to check if data is properly stored:
+
+```java
+    @Test
+    @DisplayName("Should update current traffic light status")
+    public void testTrafficgetCurrentTrafficLight() {
+
+        Traffic currentTrafic = new Traffic();
+
+        currentTrafic.setCurrentTrafficLight(TrafficLigth.GREEN);
+        assertEquals(TrafficLigth.GREEN, currentTrafic.getCurrentTrafficLight());
+    }
+
+    @Test
+    @DisplayName("Should update max speed allowed status")
+    public void testTrafficgetMaxSpeedAllowed() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short maxSpeed = 20;
+        currentTrafic.setMaxSpeedAllowed(maxSpeed);
+        assertEquals(maxSpeed, currentTrafic.getMaxSpeedAllowed());
+    }
+
+    @Test
+    @DisplayName("Should update min speed allowed status")
+    public void testTrafficgetMinSpeedAllowed() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short minSpeed = 10;
+        currentTrafic.setMinSpeedAllowed(minSpeed);
+        assertEquals(minSpeed, currentTrafic.getMinSpeedAllowed());
+    }
+
+    @Test
+    @DisplayName("Should update street direction flow status")
+    public void testTrafficgetStreetDirectionFlow() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short maxSpeed = 20;
+        currentTrafic.setStreetDirectionFlow(StreetDirectionFlow.ONE_WAY);
+        assertEquals(StreetDirectionFlow.ONE_WAY, currentTrafic.getStreetDirectionFlow());
+    }
+
+```
+
+And here is the result in method and line coverage:
+
+// image2
