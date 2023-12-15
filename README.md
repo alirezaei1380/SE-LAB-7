@@ -171,32 +171,6 @@ And here is the result in method and line coverage:
 
 // image
 
-### Enhancement 5
-
-Objective: Covering crossedTheCrosswalk method in Footpassenger class
-
-
-We added following tests to check if data is properly stored:
-
-```java
-    @Test
-    @DisplayName("Should update cross the cross walk status")
-    public void testFootpassengerCrossTheCrossWalk() {
-
-        Traffic currentTrafic = new Traffic();
-        currentTrafic.setIntenseCarTraffic(true);
-
-        Footpassenger currentFootpassengerBehavior = new Footpassenger();
-        currentFootpassengerBehavior.setCrossedTheCrosswalk(true);
-        assertEquals(true, currentFootpassengerBehavior.crossedTheCrosswalk());
-    }
-
-```
-
-And here is the result in method and line coverage:
-
-// image
-
 ### Enhancement 6
 
 Objective: Covering remained methods in Traffic class
