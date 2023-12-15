@@ -116,7 +116,7 @@ And here is the result in method and line coverage:
 
 <img width="643" alt="Screen Shot 1402-09-24 at 19 00 41" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/510a32b8-8103-4e24-a5c4-b89dba48e8ad">
 
-### Enhancement 5
+### Enhancement 4
 
 Objective: Covering if run method is called in CodeCoverageApplication class or not
 
