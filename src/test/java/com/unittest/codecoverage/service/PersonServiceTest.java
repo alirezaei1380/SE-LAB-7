@@ -140,4 +140,21 @@ public class PersonServiceTest {
 				.hasMessage(expectedMessage);
 
 	}
+
+	@Test
+	public void testDelete_successfulDeleteWhileDeletingSampleUser() {
+		Person person = createSampleUser();
+		service.delete(person.getName());
+	}
+
+	@Test
+	public void testDelete_shouldFailWhenTryToDeleteNullUser() {
+		List<String> expectedErrors = Lists.newArrayList("Name is required");
+		String expectedMessage = String.join(";", expectedErrors);
+		assertThatThrownBy(() -> service.delete(null))
+				.isInstanceOf(PersonException.class)
+				.hasFieldOrPropertyWithValue("errors", expectedErrors)
+				.hasMessage(expectedMessage);
+
+	}
 }
