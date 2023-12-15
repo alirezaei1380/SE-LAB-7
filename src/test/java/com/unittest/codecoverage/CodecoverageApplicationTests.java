@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.ArrayList;
 import org.mockito.Mockito;
 
+// This test needs database setup and running
 class CodeCoverageApplicationTests {
 
 	@Mock
