@@ -18,8 +18,9 @@ Slides with content of the topic (pt-BR):<br> https://docs.google.com/presentati
 
 # Examination Report
 
-Here is the initial coverage of tests:
 
+Here is the initial coverage of tests:
+<img width="587" alt="Screen Shot 1402-09-24 at 18 32 27" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/26ec46a8-1c50-4ff9-8d31-066d6bd48f27">
 
 
 ### Enhancement 1
@@ -29,6 +30,7 @@ Objective: Covering update/Get method in PersonService
 We added following test to cover update function followed by successful get in the service without raising any errors:
 
 ```java
+
 	@Test
 	public void testUpdate_successfulUpdateWhenAllTheDataIsFilled() {
 		Person person = createSampleUser();
@@ -53,6 +55,7 @@ We added following test to cover update function followed by successful get in t
 
 And here is the result in method and line coverage:
 
+<img width="575" alt="Screen Shot 1402-09-24 at 18 47 14" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/ec28ada6-5b10-4fea-92d7-3f0b91b4494a">
 
 ### Enhancement 2
 
@@ -82,6 +85,8 @@ We added following tests to cover get function in failure case:
 
 And here is the result in method and line coverage:
 
+<img width="752" alt="Screen Shot 1402-09-24 at 18 55 01" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/4b30ee9a-da1e-4021-a323-4007e46fe385">
+
 
 ### Enhancement 3
 
@@ -109,9 +114,12 @@ We added following tests to cover delete function in both successful and failure
 ```
 And here is the result in method and line coverage:
 
+<img width="643" alt="Screen Shot 1402-09-24 at 19 00 41" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/510a32b8-8103-4e24-a5c4-b89dba48e8ad">
+
 ### Enhancement 5
 
 Objective: Covering if run method is called in CodeCoverageApplication class or not
+
 
 We added following tests to check if proper method is called in the class or not:
 
@@ -129,7 +137,9 @@ class CodeCoverageApplicationTests {
 	}
 
 }
+
 ```
 
 And here is the result in method and line coverage:
 
+<img width="746" alt="Screen Shot 1402-09-24 at 19 10 15" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/2b9f5953-d499-4679-88bc-30d5bd2f16c9">
