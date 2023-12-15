@@ -169,7 +169,7 @@ We added following tests to check if data is properly stored:
 
 And here is the result in method and line coverage:
 
-// image
+<img width="573" alt="Screenshot 2023-12-15 at 21 35 46(1)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/949b83d5-6c14-4751-afc2-2330c5819e22">
 
 ### Enhancement 6
 
@@ -226,7 +226,7 @@ We added following tests to check if data is properly stored:
 
 And here is the result in method and line coverage:
 
-// image2
+<img width="570" alt="Screenshot 2023-12-15 at 21 57 57(2)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/2446f6de-8eb1-477e-b783-7214cc54f678">
 
 ### Enhancement 7
 
@@ -295,4 +295,4 @@ public class PersonRepositoryTest{
 
 And here is the result in method and line coverage (we reached 100%):
 
-// image3
+<img width="563" alt="Screenshot 2023-12-15 at 22 43 15(3)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/125b6cc0-aa15-4091-8975-b2739a3e4d3e">
