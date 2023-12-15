@@ -44,7 +44,8 @@ We added following test to cover update function followed by successful get in t
 		person.setGender(Gender.F);
 
 		service.update(person);
-		Person person1 = service.get("TempName");
+        when(repository.get("TempName")).thenReturn(person);
+        Person person1 = service.get("TempName");
 
 		assert person1 != null;
 		assert person1.getAge() == 24;

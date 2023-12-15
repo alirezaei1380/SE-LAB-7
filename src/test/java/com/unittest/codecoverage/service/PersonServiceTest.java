@@ -115,6 +115,8 @@ public class PersonServiceTest {
 		person.setGender(Gender.F);
 
 		service.update(person);
+		when(repository.get("TempName")).thenReturn(person);
+
 		Person person1 = service.get("TempName");
 
 		assert person1 != null;
