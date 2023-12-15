@@ -144,3 +144,55 @@ class CodeCoverageApplicationTests {
 And here is the result in method and line coverage:
 
 <img width="746" alt="Screen Shot 1402-09-24 at 19 10 15" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/2b9f5953-d499-4679-88bc-30d5bd2f16c9">
+
+### Enhancement 5
+
+Objective: Covering crossedTheCrosswalk method in Footpassenger class
+
+
+We added following tests to check if data is properly stored:
+
+```java
+    @Test
+    @DisplayName("Should update cross the cross walk status")
+    public void testFootpassengerCrossTheCrossWalk() {
+
+        Traffic currentTrafic = new Traffic();
+        currentTrafic.setIntenseCarTraffic(true);
+
+        Footpassenger currentFootpassengerBehavior = new Footpassenger();
+        currentFootpassengerBehavior.setCrossedTheCrosswalk(true);
+        assertEquals(true, currentFootpassengerBehavior.crossedTheCrosswalk());
+    }
+
+```
+
+And here is the result in method and line coverage:
+
+// image
+
+### Enhancement 5
+
+Objective: Covering crossedTheCrosswalk method in Footpassenger class
+
+
+We added following tests to check if data is properly stored:
+
+```java
+    @Test
+    @DisplayName("Should update cross the cross walk status")
+    public void testFootpassengerCrossTheCrossWalk() {
+
+        Traffic currentTrafic = new Traffic();
+        currentTrafic.setIntenseCarTraffic(true);
+
+        Footpassenger currentFootpassengerBehavior = new Footpassenger();
+        currentFootpassengerBehavior.setCrossedTheCrosswalk(true);
+        assertEquals(true, currentFootpassengerBehavior.crossedTheCrosswalk());
+    }
+
+```
+
+And here is the result in method and line coverage:
+
+// image

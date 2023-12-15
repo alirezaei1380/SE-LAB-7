@@ -3,7 +3,7 @@ package test.java.com.unittest.codecoverage.service;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.unittest.codecoverage.exceptions.BehaviorException;
 import com.unittest.codecoverage.models.Footpassenger;
 import com.unittest.codecoverage.models.Traffic;
@@ -49,5 +49,18 @@ public class TrafficBehaviorServiceTest {
 			.hasMessage("You should be more careful");
 		
 	}
+
+	@Test
+	@DisplayName("Should update cross the cross walk status")
+	public void testFootpassengerCrossTheCrossWalk() {
+
+		Traffic currentTrafic = new Traffic();
+		currentTrafic.setIntenseCarTraffic(true);
+
+		Footpassenger currentFootpassengerBehavior = new Footpassenger();
+		currentFootpassengerBehavior.setCrossedTheCrosswalk(true);
+		assertEquals(true, currentFootpassengerBehavior.crossedTheCrosswalk());
+	}
+
 
 }
