@@ -144,3 +144,155 @@ class CodeCoverageApplicationTests {
 And here is the result in method and line coverage:
 
 <img width="746" alt="Screen Shot 1402-09-24 at 19 10 15" src="https://github.com/alirezaei1380/SE-LAB-7/assets/60629485/2b9f5953-d499-4679-88bc-30d5bd2f16c9">
+
+### Enhancement 5
+
+Objective: Covering crossedTheCrosswalk method in Footpassenger class
+
+
+We added following tests to check if data is properly stored:
+
+```java
+    @Test
+    @DisplayName("Should update cross the cross walk status")
+    public void testFootpassengerCrossTheCrossWalk() {
+
+        Traffic currentTrafic = new Traffic();
+        currentTrafic.setIntenseCarTraffic(true);
+
+        Footpassenger currentFootpassengerBehavior = new Footpassenger();
+        currentFootpassengerBehavior.setCrossedTheCrosswalk(true);
+        assertEquals(true, currentFootpassengerBehavior.crossedTheCrosswalk());
+    }
+
+```
+
+And here is the result in method and line coverage:
+
+<img width="573" alt="Screenshot 2023-12-15 at 21 35 46(1)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/949b83d5-6c14-4751-afc2-2330c5819e22">
+
+### Enhancement 6
+
+Objective: Covering remained methods in Traffic class
+
+
+We added following tests to check if data is properly stored:
+
+```java
+    @Test
+    @DisplayName("Should update current traffic light status")
+    public void testTrafficgetCurrentTrafficLight() {
+
+        Traffic currentTrafic = new Traffic();
+
+        currentTrafic.setCurrentTrafficLight(TrafficLigth.GREEN);
+        assertEquals(TrafficLigth.GREEN, currentTrafic.getCurrentTrafficLight());
+    }
+
+    @Test
+    @DisplayName("Should update max speed allowed status")
+    public void testTrafficgetMaxSpeedAllowed() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short maxSpeed = 20;
+        currentTrafic.setMaxSpeedAllowed(maxSpeed);
+        assertEquals(maxSpeed, currentTrafic.getMaxSpeedAllowed());
+    }
+
+    @Test
+    @DisplayName("Should update min speed allowed status")
+    public void testTrafficgetMinSpeedAllowed() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short minSpeed = 10;
+        currentTrafic.setMinSpeedAllowed(minSpeed);
+        assertEquals(minSpeed, currentTrafic.getMinSpeedAllowed());
+    }
+
+    @Test
+    @DisplayName("Should update street direction flow status")
+    public void testTrafficgetStreetDirectionFlow() {
+
+        Traffic currentTrafic = new Traffic();
+
+        short maxSpeed = 20;
+        currentTrafic.setStreetDirectionFlow(StreetDirectionFlow.ONE_WAY);
+        assertEquals(StreetDirectionFlow.ONE_WAY, currentTrafic.getStreetDirectionFlow());
+    }
+
+```
+
+And here is the result in method and line coverage:
+
+<img width="570" alt="Screenshot 2023-12-15 at 21 57 57(2)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/2446f6de-8eb1-477e-b783-7214cc54f678">
+
+### Enhancement 7
+
+Objective: Covering Person Repository class methods
+
+
+We added following test class
+
+```java
+public class PersonRepositoryTest{
+
+    @Test
+    @DisplayName("Should throw exception when input is Null")
+    public void testPersonRepositoryInsertNullException() {
+        PersonRepository personRepository = new PersonRepository();
+        Assertions.assertThatThrownBy(() -> personRepository.insert(null))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessageContaining("person can't be null");
+    }
+
+    @Test
+    @DisplayName("Should return the same person")
+    public void testPersonRepositoryInsert() {
+        PersonRepository personRepository = new PersonRepository();
+        Person person = new Person();
+        assertEquals(person, personRepository.insert(person));
+    }
+
+    @Test
+    @DisplayName("Should throw exception when input is Null")
+    public void testPersonRepositoryUpdate() {
+        PersonRepository personRepository = new PersonRepository();
+        Assertions.assertThatThrownBy(() -> personRepository.update(null))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessageContaining("person can't be null");
+    }
+
+    @Test
+    @DisplayName("Should throw exception when input is Null")
+    public void testPersonRepositoryDelete() {
+        PersonRepository personRepository = new PersonRepository();
+        Assertions.assertThatThrownBy(() -> personRepository.delete(null))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessageContaining("name can't be null");
+    }
+
+    @Test
+    @DisplayName("Should throw exception when input is Null")
+    public void testPersonRepositoryGetNullException() {
+        PersonRepository personRepository = new PersonRepository();
+        Assertions.assertThatThrownBy(() -> personRepository.get(null))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessageContaining("name can't be null");
+    }
+
+    @Test
+    @DisplayName("Should return null with any input")
+    public void testPersonRepositoryGet() {
+        PersonRepository personRepository = new PersonRepository();
+        assertNull(personRepository.get("test"));
+    }
+
+}
+
+```
+
+And here is the result in method and line coverage (we reached 100%):
+
+<img width="563" alt="Screenshot 2023-12-15 at 22 43 15(3)" src="https://github.com/alirezaei1380/SE-LAB-7/assets/59190480/125b6cc0-aa15-4091-8975-b2739a3e4d3e">
